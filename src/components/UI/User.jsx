@@ -44,7 +44,7 @@ function User() {
           <Avatar sx={{ bgcolor: deepOrange[500], width: 32, height: 32, fontSize: 16 }}>N</Avatar>
         </div>
         
-        <div className="user_name_sec text-start">
+        <div className="user_name_sec text-start d-none d-md-block">
           <p className='user-name m-0'>Hanna Fathima</p>
           <p className='designation m-0'>Admin</p>
         </div>
