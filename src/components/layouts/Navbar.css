@@ -1,0 +1,11 @@
+.logo{
+    background-color: var(--accent-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+.logo-p{
+    color: var(--text-secondary-color);
+    font-size: 13px;
+}

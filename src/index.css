@@ -1,0 +1,13 @@
+:root{
+    --text-primary-color:#0000;
+    --text-secondary-color: #495461;
+    --accent-color: #1a8754;
+}
+
+body{
+    font-family: 'Poppins',Arial, Helvetica, sans-serif  !important;
+}
+.btn-primary{
+    background-color:  #1a8754;
+    color: white;
+}
