@@ -15,7 +15,7 @@ function Navbar() {
           <MosqueIcon/>
         </div>
         <div className="logo_name ">
-          <h6 className='m-0 p-0'>Thalayad Mahal</h6>
+          <h6 className='m-0 p-0 logo-name'>Thalayad Mahal</h6>
           <p className='m-0 logo-p'>Community support</p>
         </div>
       </div>

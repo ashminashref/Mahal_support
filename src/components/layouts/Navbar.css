@@ -9,3 +9,11 @@
     color: var(--text-secondary-color);
     font-size: 13px;
 }
+@media(max-width:768px){
+    .logo-p{
+        font-size: 10px;
+    }
+    .logo-name{
+        font-size: 12px;
+    }
+}
