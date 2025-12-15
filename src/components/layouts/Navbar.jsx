@@ -3,6 +3,8 @@ import './Navbar.css'
 // MUI
 import MosqueIcon from '@mui/icons-material/Mosque';
 import NotificationBadge from '../UI/NotificationBadge';
+import User from '../UI/User';
+import Logoutbtn from '../UI/Logoutbtn';
 function Navbar() {
   return (
     <div className='p-2 d-flex align-items-center justify-content-between'>
@@ -23,7 +25,10 @@ function Navbar() {
           <NotificationBadge/>
         </div>
         <div className="profile">
-          p
+          <User/>
+        </div>
+        <div className="logout">
+            <Logoutbtn/>
         </div>
       </div>
     </div>
