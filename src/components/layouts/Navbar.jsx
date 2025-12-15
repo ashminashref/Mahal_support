@@ -30,7 +30,7 @@ function Navbar({ handleDrawerToggle }) {
           <MosqueIcon/>
         </div>
         {/* Hide text on mobile if needed, or keep it */}
-        <div className="logo_name d-none d-md-block">
+        <div className="logo_name ">
           <h6 className='m-0 p-0 logo-name'>Thalayad Mahal</h6>
           <p className='m-0 logo-p'>Community support</p>
         </div>
