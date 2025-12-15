@@ -8,10 +8,9 @@ import NotificationBadge from '../UI/NotificationBadge';
 import User from '../UI/User';
 import Logoutbtn from '../UI/Logoutbtn';
 
-// Receive the function to toggle the sidebar as a prop
-function Navbar({ handleDrawerToggle }) {
+function Navbar() {
   return (
-    <div className='p-2 d-flex align-items-center justify-content-between'>
+    <div className='p-2 d-flex fixed-top align-items-center justify-content-between bg-white nav-container'>
       
       {/* 1. Hamburger Menu (Visible only on small screens: d-md-none) */}
       <div className="toggle d-md-none">
@@ -19,7 +18,7 @@ function Navbar({ handleDrawerToggle }) {
             color="inherit" 
             aria-label="open drawer" 
             edge="start" 
-            onClick={handleDrawerToggle}
+            
         >
             <MenuIcon />
         </IconButton>
@@ -29,7 +28,6 @@ function Navbar({ handleDrawerToggle }) {
         <div className="logo rounded-3">
           <MosqueIcon/>
         </div>
-        {/* Hide text on mobile if needed, or keep it */}
         <div className="logo_name ">
           <h6 className='m-0 p-0 logo-name'>Thalayad Mahal</h6>
           <p className='m-0 logo-p'>Community support</p>

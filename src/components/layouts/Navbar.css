@@ -5,6 +5,9 @@
     align-items: center;
     padding: 8px;
 }
+.nav-container{
+    border-bottom: 1px solid var(--border-color);
+}
 .logo-p{
     color: var(--text-secondary-color);
     font-size: 13px;

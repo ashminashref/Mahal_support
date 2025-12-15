@@ -1,0 +1,17 @@
+.sidebar{
+    border-right: 1px solid var(--border-color);
+    width: 20vw;
+}
+.side-btn{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    width: 220px;
+    font-weight: normal;
+    background:none;
+    transition: ease-in-out 0.2s;
+}
+.side-btn:hover, .side-btn:active{
+    background-color: var(--accent-color);
+    color: white;
+}
