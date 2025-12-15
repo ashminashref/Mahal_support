@@ -27,9 +27,9 @@ function Navbar() {
         <div className="profile">
           <User/>
         </div>
-        <div className="logout">
-            <Logoutbtn/>
-        </div>
+       <div className="logout d-none d-md-block">
+    <Logoutbtn/>
+</div>
       </div>
     </div>
   )
