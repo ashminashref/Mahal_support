@@ -14,7 +14,7 @@ function Navbar() {
         <div className="logo rounded-3">
           <MosqueIcon/>
         </div>
-        <div className="logo_name ">
+        <div className="logo_name d-none d-md-block">
           <h6 className='m-0 p-0 logo-name'>Thalayad Mahal</h6>
           <p className='m-0 logo-p'>Community support</p>
         </div>
