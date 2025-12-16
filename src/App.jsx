@@ -1,40 +1,40 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import Preloader from './components/preloader/Preloader';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/preloader/Home';
-import SignIn from './components/Signin/SignIn';
+import './App.css';
+
+// Import Components
+import Preloader from './components/preloader/Preloader';
+import Home from './components/preloader/Home'; // Ensure this path is correct
+import SignIn from './components/Signin/SignIn'; // Ensure this path is correct
 
 function App() {
-  // state to track if the app is loading
-  const [isLoading, setIsLoading] = useState(true)
+  // State to track loading
+  const [isLoading, setIsLoading] = useState(true);
 
-  // a loading delay
   useEffect(() => {
+    // Simulate a loading delay (e.g., fetching user data)
     const timer = setTimeout(() => {
-      setIsLoading(false)
+      setIsLoading(false);
     }, 2500);
 
-    // cleans the timer if the components unmount
-    return () => clearTimeout(timer)
-  })
+    // Cleanup timer to prevent memory leaks
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-   {/* conditional rendering of preloader */}
-
-   {isLoading? (
-    <Preloader/>
-   ):(
-    <div className='App'>
-      {/* main contents */}
-      <Routes>
-        <Route path = '' element = {<SignIn/>}/>
-        <Route path = '/home' element = {<Home/>}/>
-      </Routes>
-    </div>
-   )}
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<SignIn />} />
+            <Route path="/home" element={<Home />} />
+          </Routes>
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

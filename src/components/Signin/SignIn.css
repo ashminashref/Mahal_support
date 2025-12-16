@@ -1,6 +1,8 @@
 .signin-page{
     min-height: 100vh;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 .brand-logo{
     width: 50px;
@@ -8,7 +10,7 @@
     background-color: var(--accent-color);
     color: white;
     font-size: 24px;
-    font-weight: bold;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,8 +30,13 @@
 /* card styling */
 .sign-card{
     width: 100%;
-    max-width: 420px; /* prevent getting too wide on large screens */
+    max-width: 450px; /* prevent getting too wide on large screens */
     border: 1px solid #dfdede !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
 }
 
 /* input styling */
@@ -41,7 +48,7 @@
 }
 
 .custom-input{
-    background-color:#e8f0fe !important;
+    background-color:#eef4fe !important;
     border: 1px solid rgb(227, 227, 227) !important;
     padding: 12px 15px !important;
     font-size: 0.95rem !important;
@@ -78,15 +85,17 @@
 }
 /* links */
 .forgot-link{
-    color: #0a6bea;
+    color: var(--link-primary);
     font-size: 0.9rem;
     text-decoration: none;
     font-weight: 500;
+    transition: ease-in-out 0.2s;
 }
 .create-account-link{
-    color: #0a6bea;
+    color: var(--link-primary);
     text-decoration: none;
     font-weight: 600;
+    transition: ease-in-out 0.2s;
 }
 .no-account-text{
     color: #6c757d;
@@ -105,4 +114,7 @@
 .btn-login:hover{
     background-color: #166144;
     color: white;
+}
+.forgot-link:hover, .create-account-link:hover{
+    color: rgb(72, 72, 236);
 }
