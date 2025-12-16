@@ -118,3 +118,8 @@
 .forgot-link:hover, .create-account-link:hover{
     color: rgb(72, 72, 236);
 }
+@media(max-width:768px){
+    .sign-card{
+        max-width: 80vw;
+    }
+}

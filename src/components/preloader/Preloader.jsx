@@ -9,12 +9,11 @@ function Preloader() {
     <MosqueIcon/>
 </div>
         <h3 className='fw-semibold m-0 p-0'>Thalayad Mahal</h3>
-        <video src="/Animations/loader.webm"
-        className='loader' 
-        autoPlay
-        muted
-        loop
-        ></video>
+        <div className="preloader">
+      <span className="dot d1"></span>
+      <span className="dot d2"></span>
+      <span className="dot d3"></span>
+    </div>
     </div>
   )
 }
