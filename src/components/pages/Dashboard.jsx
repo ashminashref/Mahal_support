@@ -5,8 +5,8 @@ import Offcanvas from '../layouts/Offcanvas'
 function Dashboard() {
   return (
     <div>
-        <Navbar/>
-        <Offcanvas/>
+        {/* <Navbar/> */}
+        {/* <Offcanvas/> */}
     </div>
   )
 }

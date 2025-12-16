@@ -8,21 +8,18 @@ import NotificationBadge from '../UI/NotificationBadge';
 import User from '../UI/User';
 import Logoutbtn from '../UI/Logoutbtn';
 
-function Navbar() {
+
+
+function Navbar({ onToggle }) {
   return (
     <div className='p-2 d-flex fixed-top align-items-center justify-content-between bg-white nav-container'>
       
-      {/* 1. Hamburger Menu (Visible only on small screens: d-md-none) */}
-      <div className="toggle d-md-none">
-        <IconButton 
-            color="inherit" 
-            aria-label="open drawer" 
-            edge="start" 
-            
-        >
-            <MenuIcon />
-        </IconButton>
-      </div>
+    {/* Ensure the onClick is on the DIV, and the DIV has a size */}
+<div className="toggle d-md-none p-2" onClick={onToggle} style={{cursor: 'pointer'}}>
+    <IconButton color="inherit">
+        <MenuIcon />
+    </IconButton>
+</div>
 
       <div className="logo-section d-flex gap-2 align-items-center">
         <div className="logo rounded-3">

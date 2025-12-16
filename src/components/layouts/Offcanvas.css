@@ -16,6 +16,42 @@
     background-color: var(--accent-color);
     color: white;
 }
+/* Offcanvas.css */
+
+/* 1. MOBILE STYLES (Default) */
+.sidebar {
+    position: fixed !important;   /* Force fixed position */
+    top: 0;
+    left: -100% !important;       /* Force hidden off-screen */
+    width: 280px;                 /* Must have a width */
+    height: 100vh;
+    background-color: #ffffff !important; /* Solid white background */
+    z-index: 9999 !important;     /* Sit on top of EVERYTHING (Navbar is usually 1030) */
+    transition: left 0.3s ease-in-out;
+    border-right: 1px solid #ddd;
+    
+    /* Optional: Add shadow so you can see the edge */
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2); 
+}
+
+/* 2. OPEN STATE */
+/* This class is added by React when button is clicked */
+.sidebar.show {
+    left: 0 !important; /* Slide onto screen */
+}
+
+/* 3. DESKTOP STYLES (Screen > 768px) */
+@media (min-width: 768px) {
+    .sidebar {
+        position: relative !important; /* Sit next to content */
+        left: 0 !important;            /* Always visible */
+        width: auto;                   /* Let content dictate width */
+        height: 100vh;
+        z-index: 1 !important;         /* Reset priority */
+        box-shadow: none;
+        transform: none;
+    }
+}
 @media (max-width: 768px) {
   .btn-text {
     display: none;
