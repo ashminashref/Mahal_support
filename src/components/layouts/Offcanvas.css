@@ -1,6 +1,7 @@
 .sidebar{
     border-right: 1px solid var(--border-color);
     width: 20vw;
+    height: 100vh;
 }
 .side-btn{
     border: none;
@@ -14,4 +15,12 @@
 .side-btn:hover, .side-btn:active{
     background-color: var(--accent-color);
     color: white;
+}
+@media (max-width: 768px) {
+  .btn-text {
+    display: none;
+  }
+  .side-btn{
+    width: auto;
+  }
 }
