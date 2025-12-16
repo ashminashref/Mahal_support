@@ -18,6 +18,6 @@ p{
 .my_custom_icon, a{
     color: black !important;
 }
-.my_custom_icon, a{
+.my_custom_icon:hover, a{
     color: white !important;
 }
