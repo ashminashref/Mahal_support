@@ -1,0 +1,108 @@
+.signin-page{
+    min-height: 100vh;
+    padding: 20px;
+}
+.brand-logo{
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.welcome-text{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.sub-text{
+    color: var(--text-secondary-color);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* card styling */
+.sign-card{
+    width: 100%;
+    max-width: 420px; /* prevent getting too wide on large screens */
+    border: 1px solid #dfdede !important;
+}
+
+/* input styling */
+.form-label{
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    color: #444 !important;
+    margin-bottom: 6px !important;
+}
+
+.custom-input{
+    background-color:#e8f0fe !important;
+    border: 1px solid rgb(227, 227, 227) !important;
+    padding: 12px 15px !important;
+    font-size: 0.95rem !important;
+    border-radius: 8px !important;
+    transition: all 0.2s !important;
+}
+
+.custom-input:focus{
+    background-color: #fff !important;
+    border-color:#1f7a58  !important;
+    box-shadow: 0 0 0 3px rgba(31, 122, 88, 0.1) !important;
+}
+
+/* password toggle */
+.password-wrapper{
+    position: relative;
+}
+.password-toggle-icon{
+    position: absolute;
+    top: 70%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    transition: ease-in-out 0.2s;
+    
+}
+.password-toggle-icon:hover{
+    color: rgb(42, 42, 42);
+    
+}
+.mui-icon{
+    font-size: 19px !important;
+}
+/* links */
+.forgot-link{
+    color: #0a6bea;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+.create-account-link{
+    color: #0a6bea;
+    text-decoration: none;
+    font-weight: 600;
+}
+.no-account-text{
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.btn-login{
+    background-color: #1f7a58;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+.btn-login:hover{
+    background-color: #166144;
+    color: white;
+}

@@ -3,10 +3,12 @@
     --text-secondary-color: #495461;
     --accent-color: #1a8754;
     --border-color:rgb(211, 210, 210);
+    --background-color:#f3f7f4;
 }
 
 body{
     font-family: 'Poppins',Arial, Helvetica, sans-serif  !important;
+    background-color: var(--background-color) !important;
 }
 .btn-primary{
     background-color:  #1a8754;
