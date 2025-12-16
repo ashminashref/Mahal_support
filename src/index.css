@@ -15,9 +15,3 @@ body{
 p{
   margin: 0 !important;
 }
-.my_custom_icon, a{
-    color: black !important;
-}
-.my_custom_icon:hover, a{
-    color: white !important;
-}
