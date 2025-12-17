@@ -12,6 +12,8 @@ import Notifications from './components/pages/Notifications';
 import Certificates from './components/pages/Certificates';
 import Family from './components/pages/Family';
 import Profile from './components/pages/Profile';
+import Register from './components/Signin/Register';
+import ResetPassword from './components/Signin/ResetPassword';
 
 // Import the Layout we designed (Ensure you have created this file from the previous step)
 
@@ -39,6 +41,8 @@ function App() {
        
             {/* The Login page stands alone */}
             <Route path="/" element={<SignIn />} />
+            <Route path='/register' element={<Register/>}/>
+            <Route path='/reset-password' element={<ResetPassword/>}/>
 
             {/* --- 2. Protected Routes (With Sidebar) --- */}
             {/* We wrap these routes in the Layout component */}

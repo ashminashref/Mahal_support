@@ -1,0 +1,115 @@
+.register-page {
+  min-height: 100vh;
+  background-color: #f7faf9;
+  font-family: Arial, sans-serif;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 460px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: #1f7a54;
+}
+
+.back-icon {
+  font-size: 16px !important;
+}
+
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.register-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  display: block;
+  margin-top: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #1f7a54;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.col {
+  flex: 1;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field span {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.create-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background-color: #1f7a54;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background-color: #155c3f;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+
+}

@@ -1,74 +1,104 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 import './SignIn.css'
+
 // MUI
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import MosqueIcon from '@mui/icons-material/Mosque';
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
+import MosqueIcon from '@mui/icons-material/Mosque'
+
 function SignIn() {
-    const [showPassword, setPassword] = useState(false)
+  const navigate = useNavigate()
 
-    const togglePasswordVisibility = () => {
-        setPassword(!showPassword)
+  const [showPassword, setShowPassword] = useState(false)
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword)
+  }
+
+  // ✅ LOGIN HANDLER
+  const handleLogin = (e) => {
+    e.preventDefault() // prevent page reload
+
+    // TEMP LOGIN CHECK (replace with backend API)
+    if (username.trim() !== "" && password.trim() !== "") {
+      navigate("/home")   // ✅ GO TO HOME PAGE
+    } else {
+      alert("Please enter valid credentials")
     }
+  }
+
   return (
-    <div className='d-flex signin-page flex-column justify-content-center bg-white  align-items-center'>
-<div className="brand-logo mb-3 mt-4">
-    <MosqueIcon/>
-</div>
-        <div className='text-center mb-4 '>
-             <h5 className='welcome-text'>Welcome Back</h5>
-        <h6 className='sub-text'>Sign in to you account</h6>
-        </div>
-       
+    <div className="signin-page">
+      
+      {/* Logo */}
+      <div className="brand-logo mb-3">
+        <MosqueIcon />
+      </div>
 
-    <form method='post' className='sign-card rounded-4 mb-4'>
-        <div className="form-group">
+      {/* Heading */}
+      <div className="text-center mb-4">
+        <h5 className="welcome-text">Welcome Back</h5>
+        <h6 className="sub-text">Sign in to your Mahal account</h6>
+      </div>
 
-        
-        <label htmlFor="email" className='form-label'>Email Address</label>
-        <input type="email" name="" className='form-control custom-input' id="email" placeholder='someone@gmail.com' />
-         </div>
-         <div className="form-group mb-2 position-relative">
-        <label htmlFor="password" className='form-label'>Password</label>
-        <input type={ showPassword? "text":"password"}
-         name="password" 
-         className='form-control custom-input' 
-         id="password"
-         placeholder='••••••••'
-         />
-         {/* eye icon */}
-         <span
-         className='password-toggle-icon'
-         onClick={togglePasswordVisibility}
-         >
-            { showPassword?<VisibilityIcon className='mui-icon'/> : <VisibilityOffIcon className='mui-icon'/> }
-         </span>
+      {/* Card */}
+      <form className="sign-card" onSubmit={handleLogin}>
+
+        {/* Email / Mobile */}
+        <div className="form-group mb-3">
+          <label className="form-label">Mobile Number / Email</label>
+          <input
+            type="text"
+            className="form-control custom-input"
+            placeholder="Enter mobile or email"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </div>
 
-         {/* forgot pass */}
+        {/* Password */}
+        <div className="form-group mb-2 position-relative">
+          <label className="form-label">Password</label>
+          <input
+            type={showPassword ? "text" : "password"}
+            className="form-control custom-input"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-    <div className="d-flex justify-content-lg-end mb-4">
-        <p className='no-account-text'>Forgot password?        <a href="#" className='forgot-link'>Reset</a>
-</p>
-    </div>
-<hr />
-    {/* Login Button */}
-    <Link to = 'home'>
-    <button type='submit' className=' btn-login w-100 mb-3' >
-        Login
-    </button>
-    </Link>
+          <span
+            className="password-toggle-icon"
+            onClick={togglePasswordVisibility}
+          >
+            {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+          </span>
+        </div>
 
-    {/* create account */}
-    <div className="text-center mt-3">
-        <span className='no-account-text mx-1'>Don't have an account?</span>
-        <a href="#" className='create-account-link'>Create Account</a>
-    </div>
-    </form>
-   
+        {/* Forgot */}
+        <div className="text-end mb-3">
+          <Link to="/reset-password" className="forgot-link">
+            Forgot Password?
+          </Link>
+        </div>
 
+        {/* Login Button */}
+        <button type="submit" className="btn-login w-100 mb-3">
+          Login
+        </button>
 
+        {/* Register */}
+        <div className="text-center">
+          <span className="no-account-text">Don't have an account?</span>
+          <Link to="/register" className="create-account-link ms-1">
+            Create Account
+          </Link>
+        </div>
+
+      </form>
     </div>
   )
 }
