@@ -4,20 +4,28 @@ import './App.css';
 
 // Import Components
 import Preloader from './components/preloader/Preloader';
-import Home from './components/preloader/Home'; // Ensure this path is correct
-import SignIn from './components/Signin/SignIn'; // Ensure this path is correct
+import SignIn from './components/Signin/SignIn';
+import Home from './components/pages/Home';
+import Layout from './components/layout/Layout';
+import Payments from './components/pages/Payments';
+import Notifications from './components/pages/Notifications';
+import Certificates from './components/pages/Certificates';
+import Family from './components/pages/Family';
+import Profile from './components/pages/Profile';
+
+// Import the Layout we designed (Ensure you have created this file from the previous step)
+
 
 function App() {
   // State to track loading
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading delay (e.g., fetching user data)
+    // Simulate a loading delay
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2500);
 
-    // Cleanup timer to prevent memory leaks
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,8 +36,25 @@ function App() {
       ) : (
         <div className="App">
           <Routes>
+       
+            {/* The Login page stands alone */}
             <Route path="/" element={<SignIn />} />
-            <Route path="/home" element={<Home />} />
+
+            {/* --- 2. Protected Routes (With Sidebar) --- */}
+            {/* We wrap these routes in the Layout component */}
+            <Route element={<Layout />}>
+              <Route path="/home" element={<Home />} />
+              {/* Add future pages here, e.g.: */}
+              <Route path="/payments" element={<Payments />} />
+              <Route path='/notifications' element = {<Notifications/>}/>
+              <Route path='/certificates' element = {<Certificates/>}/>
+              <Route path='/family' element = {<Family/>}/>
+              <Route path='/profile' element = {<Profile/>}/>
+
+
+
+            </Route>
+
           </Routes>
         </div>
       )}
