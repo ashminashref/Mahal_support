@@ -1,0 +1,201 @@
+/* Layout to center the box on the page */
+.payment-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8faf8; /* Subtle green-white tint */
+  padding: 20px;
+}
+
+/* Modal Box - Centered & Premium Look */
+.modal-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(15, 61, 46, 0.15); /* Soft green shadow */
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Header Section */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #0f3d2e; /* Community Deep Green */
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Circular Buttons for Icons */
+.icon-btn {
+  background: #f1f8e9;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: #e8f5e9;
+  transform: scale(1.1);
+}
+
+.back-icon, .close-icon {
+  color: #0f3d2e !important;
+  font-size: 22px;
+}
+
+/* Tabs for UPI/QR */
+.method-tabs {
+  display: flex;
+  gap: 8px;
+  background: #f1f8e9;
+  padding: 5px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.method-tabs button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f3d2e;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.method-tabs button.active {
+  background: #ffffff;
+  color:#0f3d2e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Content Area */
+.upi-box, .qr-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.amount {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1b1b1b;
+  margin: 5px 0;
+}
+
+/* Input Styles */
+.upi-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.upi-input:focus {
+  border-color: #2e7d32;
+}
+
+/* Proceed Button */
+.confirm-btn {
+  background: #0f3d2e; /* Main Community Green */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  margin-top: 5px;
+}
+
+.confirm-btn:hover {
+  background: #6e7170;;
+  transform: translateY(-2px);
+}
+
+/* App Buttons (GPay, etc.) */
+.upi-apps {
+  display: flex;
+  gap: 10px;
+}
+
+.app-btn {
+  flex: 1;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.app-btn:hover {
+  border-color: #494d4a;
+  background: #f1f8e9;
+}
+
+/* QR Code Section */
+.qr-container {
+  padding: 15px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.qr-container img {
+  display: block;
+}
+
+/* Footer Link */
+.footer-back-link {
+  width: 100%;
+  margin-top: 25px;
+  background: transparent;
+  border: none;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-back-link:hover {
+  color: #161414; /* Red for cancel/back */
+  text-decoration: underline;
+}

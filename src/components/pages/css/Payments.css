@@ -1,0 +1,84 @@
+.payments-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.subtitle {
+  color: #6b8f83;
+  margin-bottom: 20px;
+}
+
+/* Current Month */
+.current-card {
+  background: #ffffff;
+  border: 1px solid #d9efe7;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(31, 122, 90, 0.08);
+}
+
+.card-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  color: #1f7a5a;
+  font-size: 30px;
+}
+
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pending {
+  background: #fff1d6;
+  color: #c28a00;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.paid {
+  background: #e6f6ef;
+  color: #1f7a5a;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.pay-btn {
+  width: 100%;
+  background: #1f7a5a;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* History */
+.history-title {
+  margin: 25px 0 10px;
+}
+
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #eef5f2;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.right {
+  text-align: right;
+}
