@@ -15,8 +15,8 @@ const navItems = [
     { name: 'Home', icon: <House size={20}/>, path: '/home'},
     { name: 'Payments', icon: <CreditCard size={20}/>, path: '/Payments'},
     { name: 'Family', icon: <Users  size={20}/>, path: '/family'},
-    { name: 'Notifications', icon: <Bell size={20}/>, path: '/notifications'},
-    { name: 'Certificates', icon: <Newspaper size={20}/>, path: '/certificates'},
+    { name: 'Notifications', icon: <Bell size={20}/>, path: '/notifications', className : 'd-none d-lg-flex'},
+    { name: 'Certificates', icon: <Newspaper size={20}/>, path: '/certificates', className : 'd-none d-lg-flex'},
     { name: 'Profile', icon: <User size={20}/>, path: '/profile'},
 
 ]
@@ -38,8 +38,10 @@ function Sidebar() {
                 <NavLink
                 to={item.path}
                 key={item.name}
-                className={ ({ isActive }) => isActive ? "nav-item active": "nav-item" }
-                >
+                // className={ ({ isActive }) => isActive ? "nav-item active": "nav-item" }
+                className={ ({ isActive }) => 
+                `nav-item ${isActive ? "active" : ""} ${item.className || ""}` }
+>
                     {item.icon}
                     <span className='nav-label'>{item.name}</span>
                 </NavLink>

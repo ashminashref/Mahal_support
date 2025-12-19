@@ -1,0 +1,44 @@
+/* Custom subtle green background for unread items */
+.bg-success-subtle-custom {
+  background-color: #f0fdf4 !important; /* Very light mint green */
+}
+
+/* Specific text color for unread titles if you want them darker green */
+.text-success-dark {
+  color: #166534; /* dark green */
+}
+
+/* Icon Container */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #e2e8f0; /* Light border for contrast */
+}
+
+/* If the card is unread, maybe make the icon circle slightly greener too? */
+.bg-success-subtle-custom .icon-circle {
+  background-color: #dcfce7; /* Slightly darker green inside unread cards */
+  border-color: #bbf7d0;
+}
+
+/* The small green dot on the right */
+.unread-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px; /* Visual alignment with text */
+}
+
+/* Typography tweaks */
+.extra-small {
+  font-size: 0.75rem;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
