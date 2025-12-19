@@ -88,10 +88,17 @@
   display: flex;
   justify-content: space-between;
   background: #ffffff;
-  border: 1px solid #eef5f2;
+  border: 1px solid #e3e7e5 !important;
   padding: 15px;
   border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(31, 122, 90, 0.08);
+transition: ease-in-out 0.3s;
   margin-bottom: 12px;
+}
+.history-card:hover{
+  cursor: text;
+  box-shadow: 0 4px 12px rgba(0, 10, 6, 0.167);
+
 }
 
 .right {
