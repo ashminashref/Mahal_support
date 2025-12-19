@@ -1,6 +1,6 @@
 :root{
     --text-primary-color:#0000;
-    --text-secondary-color: #495461;
+    --text-secondary-color: #768393;
     --accent-color: #1a8754;
     --border-color:rgb(211, 210, 210);
     --background-color:#f3f7f4;
@@ -17,4 +17,20 @@ body{
 }
 p{
   margin: 0 !important;
+}
+.header-size{
+    font-size: 25px !important;
+}
+.header-sub-txt-size{
+    font-size: 15px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.pending {
+  background: #fff1d6;
+  color: #c28a00;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
 }

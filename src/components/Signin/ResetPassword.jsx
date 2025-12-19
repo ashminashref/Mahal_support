@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./ResetPassword.css";
+import "../pages/css/ResetPassword.css";
 
 // MUI Icons
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";

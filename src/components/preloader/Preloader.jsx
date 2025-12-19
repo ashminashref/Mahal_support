@@ -1,5 +1,5 @@
 import React from 'react'
-import './Preloader.css'
+import '../pages/css/Preloader.css'
 import MosqueIcon from '@mui/icons-material/Mosque';
 
 function Preloader() {

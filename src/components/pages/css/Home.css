@@ -3,7 +3,6 @@
   padding: 20px;
   max-width: 1100px;
   margin: auto;
-  font-family: "Segoe UI", sans-serif;
   background-color: #ffffff;
 }
 
@@ -32,12 +31,18 @@
 }
 
 .card {
-  background: #f3fbf8;
-  border: 1px solid #d6efe6;
-  border-radius: 12px;
-  padding: 20px;
+  background: #f3fbf8 !important;
+  border: 1px solid #e3e3e3 !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  transition: ease-in-out 0.3s ;
 }
-
+.card:hover, .announcement-card:hover{
+  cursor: pointer;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.078);
+  /* transform: scale(1.01); */
+  transform: translateY(-2px);
+}
 .card-title {
   font-size: 14px;
   color: #4b6f63;
@@ -45,6 +50,7 @@
 
 .paid {
   color: #1f7a5a;
+  font-size: 18px !important;
 }
 
 /* Announcements */
@@ -66,7 +72,7 @@
 }
 
 .announce-icon {
-  color: #1f7a5a;
+  color: #e6af30;
   font-size: 26px;
 }
 
@@ -89,6 +95,7 @@
   padding: 18px;
   margin-bottom: 14px;
   box-shadow: 0 4px 10px rgba(31, 122, 90, 0.08);
+  transition: ease-in-out 0.2s;
 }
 
 .announcement-card h4 {
@@ -116,10 +123,13 @@
   font-size: 12px;
   color: #7fa99c;
 }
-
+.greeting-txt{
+  font-family: 'Noto Sans Arabic' !important;
+}
 /* Responsive */
 @media (max-width: 600px) {
   .home-header h2 {
     font-size: 22px;
   }
+  
 }

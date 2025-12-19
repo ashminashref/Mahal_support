@@ -8,23 +8,23 @@ function Home() {
   return (
     <div className="home-container">
       {/* Header */}
-      <div className="home-header">
-        <h2>
-          Assalamu Alaikum, <span>{userName}</span>
+      <div className="home-header mb-4 ">
+        <h2 className="greeting-txt text-start header-size">
+          السلام عليكم <span>{userName}</span>
         </h2>
-        <p>Welcome to your Mahal community</p>
+        <p className="header-sub-txt-size">Welcome to your Mahal community</p>
       </div>
 
       {/* Status Cards */}
       <div className="status-cards">
         <div className="card">
           <p className="card-title">Payment Status</p>
-          <h3 className="paid">Paid</h3>
+          <h3 className="paid fw-bold mt-2 p-0">Paid</h3>
         </div>
 
         <div className="card">
           <p className="card-title">Pending Dues</p>
-          <h3>₹0</h3>
+          <h3 className="fw-bold mt-2 p-0">₹0</h3>
         </div>
       </div>
 

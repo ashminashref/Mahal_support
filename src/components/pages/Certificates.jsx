@@ -56,8 +56,8 @@ function Certificates() {
 
       {/* Header */}
       <div className="cert-header">
-        <h2>Certificates</h2>
-        <p>Manage your family documents</p>
+        <h2 className="text-start">Certificates</h2>
+        <p className="mb-4">Manage your family documents</p>
       </div>
 
       {/* Upload Box */}

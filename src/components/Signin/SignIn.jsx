@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import './SignIn.css'
+import '../pages/css/SignIn.css'
 
 // MUI
 import VisibilityIcon from '@mui/icons-material/Visibility'
