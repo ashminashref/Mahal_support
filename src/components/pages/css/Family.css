@@ -2,7 +2,7 @@
 .avatar-circle {
   width: 48px;
   height: 48px;
-  background-color: #f0fdf4 !important; /* Light green background */
+  /* background-color: #f0fdf4 !important; Light green background */
 }
 
 /* Floating Button Hover Animation */
@@ -14,7 +14,3 @@
   transform: scale(1.1);
 }
 
-/* Optional: Ensure font looks like the design */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
