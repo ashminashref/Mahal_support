@@ -1,13 +1,14 @@
 import { Row, Col, Container, Card, Button } from "react-bootstrap";
-// Lucide icons
-import { User, House, FileBadge, Pen, CreditCard, ChevronRight, LogOut, Bell, Newspaper } from "lucide-react";
-import "../pages/css/Profile.css";
+import { 
+  User, House, FileBadge, Pen, CreditCard, ChevronRight, 
+  LogOut, Bell, Newspaper, Calendar, Users 
+} from "lucide-react";
+import "../pages/css/Profile.css"; // Ensure you added the CSS above
 import { Link } from "react-router-dom";
 
 
-// lottie user icon
-const userIcon = '/Icons/avatar.gif'
-// Mock Data (Single User)
+
+// Mock Data
 const user = {
   name: "Ahmed Khan",
   mail: "ahmed.khan@gmail.com",
@@ -17,131 +18,159 @@ const user = {
   familyMembers: 4,
 };
 
-
-
 function Profile() {
-
   return (
-    <Container className="py-4" style={{ maxWidth: "600px" }}>
+    <Container className="py-5" style={{ maxWidth: "550px" }}>
+      
       {/* 1. Main Profile Card */}
-      <div className="profile-wrapper bg-white rounded-4 shadow-sm p-4 mb-4 d-flex flex-column align-items-center">
+      <Card className="border-0 shadow-sm rounded-4 mb-4 overflow-hidden">
+        {/* Decorative Background Header */}
+        <div className="profile-header-bg"></div>
         
-        {/* Profile Icon */}
-        <div className="icon-wrapper bg-light rounded-circle p-3 mb-3 d-flex align-items-center justify-content-center border">
-          {/* <User size={40} className="text-primary" /> */}
-          <img src={userIcon} 
-          style={{width:'30px'}}
-          alt="Profile-Image" />
-        </div>
-
-        {/* Name & Email */}
-        <div className="text-center mb-4">
-          <h5 className="username fw-bold mb-1">{user.name}</h5>
-          <p className="user-mail text-muted mb-0">{user.mail}</p>
-        </div>
-
-        <hr className="w-100 text-muted opacity-25" />
-
-        {/* User Details Grid */}
-        <div className="d-flex w-100 justify-content-between mt-2">
-          {/* House Section */}
-          <div className="text-center flex-fill border-end">
-            <div className="d-flex gap-2 mb-1 align-items-center justify-content-center text-secondary">
-              <House size={16} />
-              <span className="small">House Name</span>
+        <Card.Body className="text-center pt-0 pb-4">
+          {/* Avatar - Negative margin pulls it up */}
+          <div className="avatar-container d-inline-block mb-3">
+            <div className="bg-white p-1 rounded-circle shadow-sm">
+                <div className="bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '90px', height: '90px'}}>
+                     {/* Fallback to icon if img fails, or use img */}
+                    {/* <img src={userIcon} alt="Profile" className="rounded-circle" style={{ width: '100%', height: '100%', objectFit: 'fill' }} /> */}
+                <User className="user-icon"/>
+                </div>
             </div>
-            <h6 className="fw-bold m-0">{user.houseName}</h6>
           </div>
 
-          {/* Maha ID Section */}
-          <div className="text-center flex-fill">
-            <div className="d-flex gap-2 mb-1 align-items-center justify-content-center text-secondary">
-              <FileBadge size={16} />
-              <span className="small">Mahal ID</span>
-            </div>
-            <h6 className="fw-bold m-0">{user.mahalId}</h6>
+          {/* Identity */}
+          <div className="mb-4">
+            <h4 className="fw-bold text-dark mb-1">{user.name}</h4>
+            <p className="text-muted small mb-0">{user.mail}</p>
           </div>
-        </div>
-      </div>
 
-      {/* 2. Stats Section */}
+          {/* Quick Info Grid */}
+          <div className="d-flex justify-content-center gap-4 px-3">
+            <div className="d-flex align-items-center gap-2 text-start">
+              <div className="bg-light p-2 rounded-circle text-primary">
+                <House size={18} />
+              </div>
+              <div>
+                <span className="d-block text-muted" style={{fontSize: '0.75rem'}}>House</span>
+                <span className="fw-semibold text-dark small">{user.houseName}</span>
+              </div>
+            </div>
+
+            <div className="vr opacity-25"></div>
+
+            <div className="d-flex align-items-center gap-2 text-start">
+              <div className="bg-light p-2 rounded-circle text-primary">
+                <FileBadge size={18} />
+              </div>
+              <div>
+                <span className="d-block text-muted" style={{fontSize: '0.75rem'}}>Mahal ID</span>
+                <span className="fw-semibold text-dark small">{user.mahalId}</span>
+              </div>
+            </div>
+          </div>
+        </Card.Body>
+      </Card>
+
+      {/* 2. Stats Section - Side by Side (Standard Layout) */}
       <Row className="g-3 mb-4">
-        <Col  lg = {12} >
-          <Card className="border-0 bg-white shadow-sm h-100 text-center py-3 bg-light">
-            <h4 className="fw-bold text-success mb-1">{user.monthsPaid}</h4>
-            <p className="text-muted small m-0">Months Paid</p>
+        <Col lg={6}>
+          <Card className="stat-card border-0 shadow-sm h-100 py-2 ">
+            <Card.Body className="d-flex flex-column align-items-center justify-content-center">
+              <div className="mb-2 text-success bg-opacity-10 bg-success p-2 rounded-circle">
+                <Calendar size={20} />
+              </div>
+              <h3 className="fw-bold mb-0">{user.monthsPaid}</h3>
+              <p className="text-muted small mb-0">Months Paid</p>
+            </Card.Body>
           </Card>
         </Col>
-        <Col  lg = {12}>
-          <Card className="border-0 shadow-sm h-100 bg-white text-center py-3 bg-light">
-            <h4 className="fw-bold text-primary mb-1">{user.familyMembers}</h4>
-            <p className="text-muted small m-0">Family Members</p>
+        <Col lg={6} >
+          <Card className="stat-card border-0 shadow-sm h-100 py-2">
+            <Card.Body className="d-flex flex-column align-items-center justify-content-center">
+              <div className="mb-2 text-primary bg-opacity-10 bg-primary p-2 rounded-circle">
+                <Users size={20} />
+              </div>
+              <h3 className="fw-bold mb-0">{user.familyMembers}</h3>
+              <p className="text-muted small mb-0">Members</p>
+            </Card.Body>
           </Card>
         </Col>
       </Row>
 
-      {/* 3. Settings Section */}
-      <div className="border-0 shadow-sm mb-5 overflow-hidden rounded-4">
-        <div className="p-3">
+      {/* 3. Menu / Settings Section */}
+      <Card className="border-0 shadow-sm rounded-4 mb-4">
+        <Card.Body className="p-2">
+          
           <SettingsButton 
-            icon={<Pen size={20} />} 
+            icon={<Pen size={18} />} 
             label="Edit Profile" 
             onClick={() => console.log("Edit")} 
           />
-          <hr className=" opacity-10" />
-          <Link to = '/Payments' className="text-decoration-none">
-          <SettingsButton 
-            icon={<CreditCard size={20} />} 
-            label="Payment History" 
-            onClick={() => console.log("Payment")} 
-          />
-          </Link>
           
-          <hr className="d-lg-none"/>
-          <Link to = '/notifications' className="text-decoration-none">
-           <SettingsButton 
-          className = 'd-lg-none'
-          icon={<Bell/>}
-          label={'Notifications'}
-          />
+          <Link to='/Payments' className="text-decoration-none">
+            <SettingsButton 
+              icon={<CreditCard size={18} />} 
+              label="Payment History" 
+            />
           </Link>
 
+          {/* Mobile Only Links */}
+          <div className="d-lg-none">
+            <Link to='/notifications' className="text-decoration-none">
+              <SettingsButton 
+                icon={<Bell size={18} />} 
+                label="Notifications" 
+                badge={2} // Optional: Add a notification badge capability
+              />
+            </Link>
 
-            <hr className="d-lg-none"/>
-          <Link to = '/certificates' className="text-decoration-none">
-           <SettingsButton 
-          className = 'd-lg-none'
-          icon={<Newspaper/>}
-          label={'Certificates'}
-          />
-          </Link>
-         
-        </div>
+            <Link to='/certificates' className="text-decoration-none">
+              <SettingsButton 
+                icon={<Newspaper size={18} />} 
+                label="Certificates" 
+              />
+            </Link>
+          </div>
+
+        </Card.Body>
+      </Card>
+
+      {/* 4. Logout */}
+      <Button 
+        variant="light" 
+        className="w-100 py-3 text-danger fw-medium d-flex align-items-center justify-content-center gap-2 rounded-4 border-0 shadow-sm"
+        style={{ backgroundColor: '#fff0f0' }} // Subtle red background
+      >
+        <LogOut size={18} />
+        Sign Out
+      </Button>
+
+      {/* Footer copyright or version could go here */}
+      <div className="text-center mt-4 text-muted small opacity-50">
+        v1.0.2
       </div>
 
-      {/* 4. Logout Button */}
-      <Button variant="outline-danger" className="w-100 py-2 d-flex align-items-center justify-content-center gap-2 rounded-3">
-        <LogOut size={18} />
-        Logout
-      </Button>
     </Container>
   );
 }
 
-// Helper Component to avoid repetition
-const SettingsButton = ({ icon, label, onClick, className}) => (
-  <button 
+// Improved Helper Component
+const SettingsButton = ({ icon, label, onClick, badge }) => (
+  <div 
     onClick={onClick}
-    // className="btn w-100 d-flex align-items-center justify-content-between p-3 border-0"
-  className={`btn w-100 d-flex align-items-center justify-content-between p-3 border-0 ${className}`}
+    className="settings-btn d-flex align-items-center justify-content-between p-3 cursor-pointer"
+    style={{ cursor: 'pointer' }}
   >
-    <div className="d-flex align-items-center gap-3 text-dark">
+    <div className="d-flex align-items-center gap-3">
       <span className="text-secondary">{icon}</span>
-      <span className="fw-medium">{label}</span>
-      
+      <span className="text-dark fw-medium" style={{ fontSize: '0.95rem' }}>{label}</span>
     </div>
-    <ChevronRight size={18} className="text-muted" />
-  </button>
+    <div className="d-flex align-items-center gap-2">
+      {badge && <span className="badge bg-danger rounded-pill">{badge}</span>}
+      <ChevronRight size={16} className="text-muted opacity-50" />
+    </div>
+  </div>
 );
 
 export default Profile;

@@ -53,7 +53,7 @@ function Family() {
         variant="success" 
         className="position-fixed rounded-circle d-flex align-items-center justify-content-center shadow-lg hover-scale"
         style={{ 
-          bottom: "40px", 
+          bottom: "100px", 
           right: "40px", 
           width: "56px", 
           height: "56px",

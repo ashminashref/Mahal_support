@@ -1,0 +1,35 @@
+/* pages/css/Profile.css */
+
+.profile-header-bg {
+  height: 100px;
+  background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.avatar-container {
+  margin-top: -50px; /* Pulls the avatar up into the header */
+}
+.user-icon{
+    font-size: 30px !important;
+}
+.stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.settings-btn {
+  transition: background-color 0.2s;
+  border-radius: 0.5rem;
+}
+
+.settings-btn:hover {
+  background-color: #f8f9fa; /* Bootstrap gray-100 */
+}
+
+.settings-btn:active {
+  background-color: #e9ecef;
+}
