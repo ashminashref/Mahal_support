@@ -74,10 +74,10 @@ function Profile() {
 
       {/* 2. Stats Section - Side by Side (Standard Layout) */}
       <Row className="g-3 mb-4">
-        <Col lg={6}>
+        <Col  xs = {12}>
           <Card className="stat-card border-0 shadow-sm h-100 py-2 ">
             <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-              <div className="mb-2 text-success bg-opacity-10 bg-success p-2 rounded-circle">
+              <div className="mb-2 text-success bg-opacity-10 bg-success p-2 rounded-3">
                 <Calendar size={20} />
               </div>
               <h3 className="fw-bold mb-0">{user.monthsPaid}</h3>
@@ -85,10 +85,10 @@ function Profile() {
             </Card.Body>
           </Card>
         </Col>
-        <Col lg={6} >
+        <Col xs={12}  >
           <Card className="stat-card border-0 shadow-sm h-100 py-2">
             <Card.Body className="d-flex flex-column align-items-center justify-content-center">
-              <div className="mb-2 text-primary bg-opacity-10 bg-primary p-2 rounded-circle">
+              <div className="mb-2 text-primary bg-opacity-10 bg-primary p-2 rounded-3">
                 <Users size={20} />
               </div>
               <h3 className="fw-bold mb-0">{user.familyMembers}</h3>
