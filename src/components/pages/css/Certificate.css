@@ -98,8 +98,28 @@
 
 .reject-reason {
   font-size: 13px;
-  color: #dc2626;
+  /* color: #dc2626; */
   margin-top: 4px;
+background: linear-gradient(
+  90deg,
+  #b20d0d 0%,
+  #ff4d4d 50%,
+  #b20d0d 100%
+);
+background-size: 200% auto;
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+-webkit-text-fill-color: transparent;
+animation: shineRed 3s linear infinite;
+
+}
+
+@keyframes shineRed{
+  to{
+    background-position: 200% center;
+  }
+  
 }
 
 /* Status */

@@ -75,7 +75,7 @@ function Certificates() {
       </div>
 
       {/* Uploaded Documents */}
-      <h4 className="section-title">Uploaded Documents</h4>
+      <h4 className="section-title" style={{fontSize:'23px'}}>Uploaded Documents</h4>
 
       <div className="doc-list">
         {documents.map((doc) => (
@@ -83,10 +83,10 @@ function Certificates() {
             <div className="doc-left">
               <DescriptionIcon />
               <div>
-                <h5>{doc.name}</h5>
-                <span>Uploaded: {doc.date}</span>
+                <h5 style={{fontSize:'17px'}}>{doc.name}</h5>
+                <span style={{fontSize:'14px'}}>Uploaded: {doc.date}</span>
                 {doc.status === "rejected" && (
-                  <p className="reject-reason">
+                  <p className="reject-reason" style={{fontSize:'12px'}}>
                     Reason: {doc.reason}
                   </p>
                 )}

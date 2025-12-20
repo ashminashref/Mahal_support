@@ -16,6 +16,7 @@ import Register from './components/Signin/Register';
 import ResetPassword from './components/Signin/ResetPassword';
 import PayNow from './components/Navigatepages/PaymentModel';
 import PaymentModal from './components/Navigatepages/PaymentModel';
+import AddFamilyMember from './components/Navigatepages/AddFamilyMember';
 
 // Import the Layout we designed (Ensure you have created this file from the previous step)
 
@@ -46,7 +47,7 @@ function App() {
             <Route path='/register' element={<Register/>}/>
             <Route path='/reset-password' element={<ResetPassword/>}/>
             <Route path='/payment-method' element={<PaymentModal/>}/>
-
+            <Route path='/AddFamilyMember' element={<AddFamilyMember/>} />
             {/* --- 2. Protected Routes (With Sidebar) --- */}
             {/* We wrap these routes in the Layout component */}
             <Route element={<Layout />}>

@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Badge, Button, Container } from "react-bootstrap";
 import { User, Plus } from "lucide-react";
 import "../pages/css/Family.css";
+import { Link } from "react-router-dom";
 
 const familyData = [
   { name: "Ahmed Khan", role: "Head", age: "45 years" },
@@ -49,6 +50,9 @@ function Family() {
       </div>
 
       {/* Floating Action Button (FAB) */}
+<Link to  = '/AddFamilyMember'>
+
+
       <Button 
         variant="success" 
         className="position-fixed rounded-circle d-flex align-items-center justify-content-center shadow-lg hover-scale"
@@ -62,7 +66,7 @@ function Family() {
       >
         <Plus size={28} color="white" />
       </Button>
-
+</Link>
     </Container>
   );
 }
