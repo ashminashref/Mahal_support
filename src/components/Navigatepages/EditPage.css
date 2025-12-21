@@ -1,0 +1,78 @@
+.edit-profile-page{
+    min-height: 100vh;
+    background: #f4f8f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.edit-card{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.edit-card h2{
+    text-align: center;
+    color: #1f7a4d;
+    margin-bottom: 5px;
+}
+.subtitle{
+    text-align: center;
+    color:#777;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+.row{
+    display: flex;
+    gap:15px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+
+}
+.field input{
+    padding:12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+.field input:disabled{
+    background: #eef4f1;
+    cursor: not-allowed;
+}
+.save-btn{
+    width: 100%;
+    padding: 13px;
+    background: #053a20;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #151515;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+@media(max-width:480px){
+    .row{
+        flex-direction: column;
+    }
+}
