@@ -33,3 +33,6 @@
 .settings-btn:active {
   background-color: #e9ecef;
 }
+.card{
+  background-color: none!important;
+}
